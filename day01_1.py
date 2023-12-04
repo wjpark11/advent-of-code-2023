@@ -1,4 +1,4 @@
-with open("inputs/day01_input.txt", "rt") as f:
+with open("day01_input.txt", "rt") as f:
     inputs = f.readlines()
     inputs = [input.strip() for input in inputs]
 
