@@ -14,11 +14,14 @@ DIGITS = {
     "six": 6,
 }
 
+
+def convert_to_digits(line):
+    pass
+
+
 converted_inputs = []
 for line in inputs:
-    for digit in DIGITS.keys():
-        if digit in line:
-            line = line.replace(digit, str(DIGITS[digit]))
+    line = convert_to_digits(line)
     converted_inputs.append(line)
 
 sum = 0
