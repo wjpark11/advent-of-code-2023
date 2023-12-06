@@ -1,29 +1,23 @@
-import re
-
 with open("day01_input.txt", "rt") as f:
     inputs = f.readlines()
     inputs = [input.strip() for input in inputs]
 
 DIGITS = {
-    "two": 2,
-    "one": 1,
-    "seven": 7,
-    "nine": 9,
-    "three": 3,
-    "five": 5,
-    "eight": 8,
-    "four": 4,
-    "six": 6,
+    "one": "o1e",
+    "two": "t2o",
+    "three": "t3e",
+    "four": "f4r",
+    "five": "f5e",
+    "six": "s6x",
+    "seven": "s7n",
+    "eight": "e8t",
+    "nine": "n9e",
 }
 
 
 def convert_to_digits(line: str) -> str:
-    while re.search(r"(two|one|seven|nine|three|five|eight|four|six)", line):
-        for i, _ in enumerate(line):
-            if re.match(r"(two|one|seven|nine|three|five|eight|four|six)", line[i:]):
-                digit = re.match(r"(two|one|seven|nine|three|five|eight|four|six)", line[i:]).group(1)
-                line = line.replace(digit, str(DIGITS[digit]), 1)
-                break
+    for digit in DIGITS.keys():
+        line = line.replace(digit, DIGITS[digit])
     return line
 
 
