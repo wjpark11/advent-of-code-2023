@@ -6,8 +6,8 @@ cards = [card[10:].split(" | ") for card in cards]
 
 cards = [
     [
-        card[0].replace("  ", " ").split(" "),
-        card[1].replace("  ", " ").split(" "),
+        card[0].strip().replace("  ", " ").split(" "),
+        card[1].strip().replace("  ", " ").split(" ")
     ]
     for card in cards
 ]
@@ -21,7 +21,4 @@ winning_points = [
 ]
 
 
-# print(cards)
-# print(winning_numbers_list)
-# print(winning_points)
 print(sum(winning_points))
