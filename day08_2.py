@@ -6,7 +6,7 @@ with open("day08_input.txt", "rt") as f:
 
 INSTRUCTIONS = inputs.pop(0)
 
-NODES = {line[:3] : (line[7:10], line[12:-1]) for line in inputs[1:]}
+NODES = {line[:3]: (line[7:10], line[12:-1]) for line in inputs[1:]}
 
 positions = [position for position in NODES.keys() if position.endswith("A")]
 

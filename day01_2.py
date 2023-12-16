@@ -32,4 +32,4 @@ for line in converted_inputs:
     calibration_value_sum += calibration_value
 
 print(calibration_value_sum)
-print(convert_to_digits('twoneightwo'))
+print(convert_to_digits("twoneightwo"))

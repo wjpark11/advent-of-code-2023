@@ -21,11 +21,14 @@ def distance(x: tuple, y: tuple) -> int:
     dist = abs(x[0] - y[0]) + abs(x[1] - y[1]) + double_cnt_x + double_cnt_y
     return dist
 
-stars = [(i, j) for i, row in enumerate(galaxy) for j, char in enumerate(row) if char == "#"]
+
+stars = [
+    (i, j) for i, row in enumerate(galaxy) for j, char in enumerate(row) if char == "#"
+]
 
 distances = []
 for star in stars:
     for other_star in stars:
         distances.append(distance(star, other_star))
 
-print(sum(distances)/2)
+print(sum(distances) / 2)

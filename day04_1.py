@@ -7,7 +7,7 @@ cards = [card[10:].split(" | ") for card in cards]
 cards = [
     [
         card[0].strip().replace("  ", " ").split(" "),
-        card[1].strip().replace("  ", " ").split(" ")
+        card[1].strip().replace("  ", " ").split(" "),
     ]
     for card in cards
 ]
