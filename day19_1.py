@@ -20,7 +20,7 @@ def get_part_rating(part_rating_str: str) -> str:
     }
 
 
-def get_workflow(workflow_str: str) -> str:
+def get_workflow(workflow_str: str) -> (str, callable):
     parts = re.match(
         r"(?P<name>\w*)\{(?P<pattern>([xmas][\<\>]\d*\:\w*\,)+)(?P<elsename>\w*)\}",
         workflow_str,
